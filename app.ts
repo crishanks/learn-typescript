@@ -88,3 +88,18 @@ let complex2: Complex = {
         return this.data;
     }
 };
+
+//union types
+let myActualAge: number | string = 27;
+myActualAge = "27";
+
+//check types
+let finalValue = "A string";
+if (typeof finalValue == "number") {
+    console.log('final value is a number');
+}
+
+//never
+function neverReturns(): never {
+    throw new Error('an error');
+}

@@ -70,3 +70,6 @@ var complex2 = {
         return this.data;
     }
 };
+//union types
+var myActualAge = 27;
+myActualAge = "27";
