@@ -73,3 +73,19 @@ var complex2 = {
 //union types
 var myActualAge = 27;
 myActualAge = "27";
+//check types
+var finalValue = "A string";
+if (typeof finalValue == "number") {
+    console.log('final value is a number');
+}
+//never
+function neverReturns() {
+    throw new Error('an error');
+}
+//nullable
+var canBeNull = 12;
+canBeNull = null;
+var canAlsoBeNull;
+canAlsoBeNull = null;
+var canThisBeAny = null;
+canThisBeAny = 12;
