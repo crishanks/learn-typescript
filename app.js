@@ -52,3 +52,15 @@ function multiply(val1, val2) {
 var myMultiply;
 myMultiply = multiply;
 console.log(myMultiply(2, 5));
+//objects
+var userData = {
+    name: "Cris",
+    age: 27
+};
+//complex object
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};

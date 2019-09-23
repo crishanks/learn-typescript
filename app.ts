@@ -64,3 +64,17 @@ function multiply(val1: number, val2: number): number {
 let myMultiply: (a: number, b: number) => number;
 myMultiply = multiply;
 console.log(myMultiply(2,5));
+
+//objects
+let userData: { name: string, age: number } = {
+    name: "Cris",
+    age: 27
+};
+
+//complex object
+let complex: {data: number[], output: (all: boolean) => number[]} = {
+    data: [100, 3.99, 10],
+    output: function (all: boolean): number[] {
+        return this.data;
+    }
+};
