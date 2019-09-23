@@ -41,3 +41,26 @@ let car: any = "BMW";
 console.log(car);
 car = {brand: "BMW", series: 3};
 console.log(car);
+
+//functions
+function returnMyName(): string {
+    return myName;
+}
+
+console.log(returnMyName());
+
+//void
+function sayHello(): void {
+    console.log('hello');
+    //doesn't return anything
+}
+
+//argument types
+function multiply(val1: number, val2: number): number {
+    return val1 * val2;
+}
+
+//function types
+let myMultiply: (a: number, b: number) => number;
+myMultiply = multiply;
+console.log(myMultiply(2,5));
