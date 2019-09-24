@@ -132,3 +132,17 @@ let myself: { name: string, bankAccount: BankAccount, hobbies: string[] } = {
 myself.bankAccount.deposit(3000);
 
 console.log(myself);
+
+// Classes
+class Person {
+    public name: string;
+    // private type: string;
+    // protected age: number;
+
+    constructor(name: string, public username: string) {
+        this.name = name;
+    }
+}
+
+const person = new Person("Steve", "steve1");
+console.log(person);

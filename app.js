@@ -102,3 +102,15 @@ var myself = {
 };
 myself.bankAccount.deposit(3000);
 console.log(myself);
+// Classes
+var Person = /** @class */ (function () {
+    // private type: string;
+    // protected age: number;
+    function Person(name, username) {
+        this.username = username;
+        this.name = name;
+    }
+    return Person;
+}());
+var person = new Person("Steve", "steve1");
+console.log(person);
