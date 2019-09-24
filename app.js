@@ -104,13 +104,24 @@ myself.bankAccount.deposit(3000);
 console.log(myself);
 // Classes
 var Person = /** @class */ (function () {
-    // private type: string;
-    // protected age: number;
-    function Person(name, username) {
+    function Person(name, username, age, type) {
         this.username = username;
+        this.age = 27;
         this.name = name;
+        this.age = age;
+        this.type = type;
     }
+    Person.prototype.printAge = function () {
+        console.log(this.age);
+        this.setType("Old Guy");
+    };
+    Person.prototype.setType = function (type) {
+        this.type = type;
+        console.log(this.type);
+    };
     return Person;
 }());
-var person = new Person("Steve", "steve1");
-console.log(person);
+var person = new Person("Steve", "steve1", 28, 'man');
+console.log(person.name, person.username);
+person.printAge();
+// person.setType("Cool Guy"); //won't work with private method

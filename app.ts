@@ -136,13 +136,27 @@ console.log(myself);
 // Classes
 class Person {
     public name: string;
-    // private type: string;
-    // protected age: number;
+    private type: string;
+    protected age: number = 27;
 
-    constructor(name: string, public username: string) {
+    constructor(name: string, public username: string, age: number, type: string) {
         this.name = name;
+        this.age = age;
+        this.type = type;
+    }
+
+    printAge() {
+        console.log(this.age)
+        this.setType("Old Guy")
+    }
+
+    private setType(type: string) {
+        this.type = type;
+        console.log(this.type);
     }
 }
 
-const person = new Person("Steve", "steve1");
-console.log(person);
+const person = new Person("Steve", "steve1", 28, 'man');
+console.log(person.name, person.username);
+person.printAge();
+// person.setType("Cool Guy"); //won't work with private method
