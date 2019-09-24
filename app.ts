@@ -173,3 +173,24 @@ class Cris extends Person {
 
 const cris = new Cris();
 console.log(cris);
+
+
+//Getters & Setters
+class Plant {
+    private _species: string = "Default";
+    
+    set species(value: string) {
+        if (value.length > 3) {
+            this._species = value;
+        } else {
+            this._species = "Default"
+        }
+    }
+
+    get species() {
+        return this._species;
+    }
+}
+
+let plant = new Plant();
+console.log(plant.species);
