@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //string
 var myName = 'Cris';
 //number
@@ -125,3 +138,14 @@ var person = new Person("Steve", "steve1", 28, 'man');
 console.log(person.name, person.username);
 person.printAge();
 // person.setType("Cool Guy"); //won't work with private method
+// Inheritance
+var Cris = /** @class */ (function (_super) {
+    __extends(Cris, _super);
+    // name = "Cris";
+    function Cris() {
+        return _super.call(this, "Cris", "cris1", 22, 'cool') || this;
+    }
+    return Cris;
+}(Person));
+var cris = new Cris();
+console.log(cris);

@@ -160,3 +160,16 @@ const person = new Person("Steve", "steve1", 28, 'man');
 console.log(person.name, person.username);
 person.printAge();
 // person.setType("Cool Guy"); //won't work with private method
+
+
+// Inheritance
+class Cris extends Person {
+    // name = "Cris";
+
+    constructor() {
+        super("Cris", "cris1", 22, 'cool');
+    }
+}
+
+const cris = new Cris();
+console.log(cris);
