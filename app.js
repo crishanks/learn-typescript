@@ -212,3 +212,70 @@ var newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT Project");
 console.log(newProject);
+// Practice
+var Car = /** @class */ (function () {
+    function Car(name) {
+        this.acceleration = 0;
+        this.name = name;
+    }
+    Car.prototype.honk = function () {
+        console.log("Toooooooooot!");
+    };
+    Car.prototype.accelerate = function (speed) {
+        this.acceleration = this.acceleration + speed;
+    };
+    return Car;
+}());
+var car1 = new Car("BMW");
+car.honk();
+console.log(car.acceleration);
+car.accelerate(10);
+console.log(car.acceleration);
+var BaseObject = /** @class */ (function () {
+    function BaseObject() {
+        this.width = 0;
+        this.length = 0;
+    }
+    return BaseObject;
+}());
+var Rectangle = /** @class */ (function (_super) {
+    __extends(Rectangle, _super);
+    function Rectangle() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Rectangle.prototype.calcSize = function () {
+        return this.width * this.length;
+    };
+    return Rectangle;
+}(BaseObject));
+var rectangle = new Rectangle();
+rectangle.width = 5;
+rectangle.length = 10;
+console.log(rectangle.calcSize());
+var Adult = /** @class */ (function () {
+    function Adult() {
+        this._firstName = "Bob";
+    }
+    Object.defineProperty(Adult.prototype, "firstName", {
+        get: function () {
+            return this._firstName;
+        },
+        set: function (value) {
+            if (value.length > 3) {
+                this._firstName = value;
+            }
+            else {
+                this._firstName = "";
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Adult;
+}());
+var jon = new Adult();
+console.log(jon.firstName);
+jon.firstName = 'pa';
+console.log(jon.firstName);
+jon.firstName = "Johnathan";
+console.log(jon.firstName);

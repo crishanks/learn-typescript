@@ -231,3 +231,68 @@ const newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT Project");
 console.log(newProject);
+
+
+// Practice
+class Car {
+    name: string;
+    acceleration: number = 0;
+
+    constructor(name: string) {
+        this.name = name;  
+    }
+
+    honk(): void {
+        console.log("Toooooooooot!");
+    }
+ 
+    accelerate(speed: number): void {
+        this.acceleration = this.acceleration + speed;
+    }
+}
+const car1 = new Car("BMW");
+car.honk();
+console.log(car.acceleration);
+car.accelerate(10);
+console.log(car.acceleration);
+
+
+class BaseObject {
+    width: number = 0;
+    length: number = 0;
+}
+
+class Rectangle extends BaseObject {
+    calcSize() {
+        return this.width * this.length;
+    }
+}
+
+const rectangle = new Rectangle();
+rectangle.width = 5;
+rectangle.length = 10;
+console.log(rectangle.calcSize());
+
+
+class Adult {
+    private _firstName: string = "Bob";
+
+    get firstName() {
+        return this._firstName;
+    }
+
+    set firstName(value: string) {
+        if (value.length > 3) {
+            this._firstName = value;
+        } else {
+            this._firstName = "";
+        }
+    }
+}
+
+const jon = new Adult();
+console.log(jon.firstName);
+jon.firstName = 'pa';
+console.log(jon.firstName);
+jon.firstName = "Johnathan";
+console.log(jon.firstName);
