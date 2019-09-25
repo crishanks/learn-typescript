@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -12,6 +11,21 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var MyMath;
+(function (MyMath) {
+    var PI = 3.14;
+    function calculateCircumference(diameter) {
+        return diameter * PI;
+    }
+    MyMath.calculateCircumference = calculateCircumference;
+})(MyMath || (MyMath = {}));
+var MyMath;
+(function (MyMath) {
+    function calculateRectangle(width, length) {
+        return width * length;
+    }
+    MyMath.calculateRectangle = calculateRectangle;
+})(MyMath || (MyMath = {}));
 //string
 var myName = 'Cris';
 //number
@@ -279,3 +293,18 @@ jon.firstName = 'pa';
 console.log(jon.firstName);
 jon.firstName = "Johnathan";
 console.log(jon.firstName);
+// Namespacing
+// To not polute the global namespace
+// namespace MyMath {
+//     const PI = 3.14;
+//     export function calculateCircumference(diameter: number) {
+//         return diameter * PI;
+//     }
+//     export function calculateRectangle(width: number, length: number) {
+//         return width * length;
+//     }
+// }
+var PI = 2.99;
+console.log(MyMath.calculateCircumference(3));
+console.log(MyMath.calculateRectangle(10, 20));
+console.log(PI); //2.99

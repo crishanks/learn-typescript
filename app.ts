@@ -1,3 +1,7 @@
+/// <reference path="circleMath.ts" />
+/// <reference path="rectangleMath.ts" />
+import CircleMath = MyMath.Circle;
+
 //string
 let myName = 'Cris';
 
@@ -296,3 +300,24 @@ jon.firstName = 'pa';
 console.log(jon.firstName);
 jon.firstName = "Johnathan";
 console.log(jon.firstName);
+
+
+// Namespacing
+// To not polute the global namespace
+// namespace MyMath {
+//     const PI = 3.14;
+
+//     export function calculateCircumference(diameter: number) {
+//         return diameter * PI;
+//     }
+
+//     export function calculateRectangle(width: number, length: number) {
+//         return width * length;
+//     }
+// }
+
+const PI = 2.99;
+
+console.log(CircleMath.calculateCircumference(3));
+console.log(MyMath.calculateRectangle(10,20))
+console.log(PI); //2.99
