@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,21 +12,11 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var MyMath;
-(function (MyMath) {
-    var PI = 3.14;
-    function calculateCircumference(diameter) {
-        return diameter * PI;
-    }
-    MyMath.calculateCircumference = calculateCircumference;
-})(MyMath || (MyMath = {}));
-var MyMath;
-(function (MyMath) {
-    function calculateRectangle(width, length) {
-        return width * length;
-    }
-    MyMath.calculateRectangle = calculateRectangle;
-})(MyMath || (MyMath = {}));
+Object.defineProperty(exports, "__esModule", { value: true });
+/// <reference path="circleMath.ts" />
+/// <reference path="rectangleMath.ts" />
+var CircleMath = MyMath.Circle;
+var circle_1 = require("./math/circle");
 //string
 var myName = 'Cris';
 //number
@@ -304,7 +295,7 @@ console.log(jon.firstName);
 //         return width * length;
 //     }
 // }
-var PI = 2.99;
-console.log(MyMath.calculateCircumference(3));
+// const PI = 2.99;
+console.log(CircleMath.calculateCircumference(3));
 console.log(MyMath.calculateRectangle(10, 20));
-console.log(PI); //2.99
+console.log(circle_1.PI); //2.99
