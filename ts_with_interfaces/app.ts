@@ -40,3 +40,16 @@ const myPerson = new Person();
 myPerson.firstName = "Cristopher"
 greet(myPerson);
 myPerson.greet("Stevenson");
+
+// Interfaces with function types
+
+interface DoubleValueFunc {
+    (numberOne: number, numberTwo: number): number;
+}
+
+let myDoubleFunction: DoubleValueFunc;
+myDoubleFunction = function(value1: number, value2: number) {
+    return (value1 + value2) * 2;
+}
+
+console.log(myDoubleFunction(10, 20));
